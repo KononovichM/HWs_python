@@ -12,6 +12,7 @@ def get_digit_sum(n):
     digit_sum = sum(int(digit) for digit in f"{hours:00}{minutes:00}")
     print(digit_sum)
 
+
 minutes1 = 240
 get_digit_sum(minutes1)
 
@@ -25,13 +26,12 @@ get_digit_sum(minutes2)
 # Для experience = 10, threshold = 15, и reward = 5, результат должен быть: true
 # Для experience = 10, threshold = 15, и reward = 4, результат должен быть: false
 
-
-
 def is_next_level(experience, threshold, reward):
-    if(experience + reward >= threshold):
+    if experience + reward >= threshold:
         print(True)
     else:
         print(False)
+
 
 my_experience = 10
 my_threshold = 15
@@ -40,8 +40,6 @@ my_reward2 = 4
 
 is_next_level(my_experience, my_threshold, my_reward1)
 is_next_level(my_experience, my_threshold, my_reward2)
-
-
 
 # Ваша задача - переконвертировать время из 24-часового формата в 12-часовой,
 # используя следующие правила: выходной формат должен быть 'чч:мм a.m.'
