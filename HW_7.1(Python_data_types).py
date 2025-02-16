@@ -7,9 +7,9 @@
 # 808 минут прошло, и это означает что сейчас 13:28, так что ответ должен быть 1 + 3 + 2 + 8 = 14.
 
 def get_digit_sum(n):
-    hours = (n // 60) % 24
-    minutes = n % 60
-    digit_sum = sum(int(digit) for digit in f"{hours:00}{minutes:00}")
+    bike_hours = (n // 60) % 24
+    bike_minutes = n % 60
+    digit_sum = sum(int(digit) for digit in f"{bike_hours:00}{bike_minutes:00}")
     print(digit_sum)
 
 
