@@ -6,17 +6,18 @@
 # Для n = 808, результат должен быть: 14
 # 808 минут прошло, и это означает что сейчас 13:28, так что ответ должен быть 1 + 3 + 2 + 8 = 14.
 
-n = 240
-hours = (n // 60) % 24
-minutes = n % 60
-digit_sum = sum(int(digit) for digit in f"{hours:00}{minutes:00}")
-print(digit_sum)
+def get_digit_sum(n):
+    hours = (n // 60) % 24
+    minutes = n % 60
+    digit_sum = sum(int(digit) for digit in f"{hours:00}{minutes:00}")
+    print(digit_sum)
 
-n = 808
-hours = (n // 60) % 24
-minutes = n % 60
-digit_sum = sum(int(digit) for digit in f"{hours:00}{minutes:00}")
-print(digit_sum)
+minutes1 = 240
+get_digit_sum(minutes1)
+
+minutes2 = 808
+get_digit_sum(minutes2)
+
 
 # Учитывая значения опыта, порога и награды, проверьте,
 # достигнете ли вы следующего уровня после убийства монстра.
@@ -24,20 +25,23 @@ print(digit_sum)
 # Для experience = 10, threshold = 15, и reward = 5, результат должен быть: true
 # Для experience = 10, threshold = 15, и reward = 4, результат должен быть: false
 
-experience = 10
-threshold = 15
-reward = 5
 
-if experience == 10:
-    if threshold == 15:
-        if reward == 5:
-            print(experience + reward >= threshold)
 
-reward = 4
-if experience == 10:
-    if threshold == 15:
-        if reward == 4:
-            print(experience + reward >= threshold)
+def is_next_level(experience, threshold, reward):
+    if(experience + reward >= threshold):
+        print(True)
+    else:
+        print(False)
+
+my_experience = 10
+my_threshold = 15
+my_reward1 = 5
+my_reward2 = 4
+
+is_next_level(my_experience, my_threshold, my_reward1)
+is_next_level(my_experience, my_threshold, my_reward2)
+
+
 
 # Ваша задача - переконвертировать время из 24-часового формата в 12-часовой,
 # используя следующие правила: выходной формат должен быть 'чч:мм a.m.'
