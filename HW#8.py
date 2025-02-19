@@ -20,10 +20,10 @@ Cows = 0
 Bulls = 0
 for index, letter in enumerate(letters):
     print(index, letter)
-    #print(letter in first_four)
+# print(letter in first_four)
     if letter in first_four and index == first_four.index(letter):
         print("bull")
-        Bulls = Bulls +1
+        Bulls = Bulls + 1
 
     else:
         if letter in first_four:
@@ -42,20 +42,19 @@ def print_pyramid(lines):
         stars = "*" * (2 * line_number + 1)
         print(spaces + stars)
 
-def sum(a,b):
+
+def suma(a, b):
     print(a+b)
+
 
 print_pyramid(10)
 
 
-#Statues
+# Statues
 def missing_statues(statues):
-    return(max(statues))-(min(statues)) + 1 - len(statues)
+    return (max(statues)) - (min(statues)) + 1 - len(statues)
+
+
 statues = [6, 2, 3, 8]
 print(missing_statues(statues))
 
-# def missing_statues_2(statues):
-# сортируем
-statues = [6, 2, 3, 8]
-statues = statues.sort()
-print(statues)
