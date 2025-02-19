@@ -55,6 +55,5 @@ def missing_statues(statues):
     return (max(statues)) - (min(statues)) + 1 - len(statues)
 
 
-statues = [6, 2, 3, 8]
+statues_2 = [6, 2, 3, 8]
 print(missing_statues(statues))
-
