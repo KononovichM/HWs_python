@@ -56,4 +56,4 @@ def missing_statues(statues):
 
 
 statues_2 = [6, 2, 3, 8]
-print(missing_statues(statues))
+print(missing_statues(statues_2))
