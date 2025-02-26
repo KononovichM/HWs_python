@@ -79,9 +79,3 @@ print(compress_string("abeehhhhhccced"))
 print(compress_string("aaabbceedd"))
 print(compress_string("abcde"))
 print(compress_string("aaabbdefffff"))
-
-
-
-
-
-
