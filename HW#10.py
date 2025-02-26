@@ -1,6 +1,6 @@
 # Напишите программу, которая бы работала следующим образом - находила символ "#"
 # и если этот символ найден - удаляла предыдущий символ из строки.
-def solution(text):
+def solution_1(text):
     result = []
 
     for char in text:
@@ -23,7 +23,7 @@ test_cases = [
 ]
 
 for input_text, expected_output in test_cases:
-    output = solution(input_text)
+    output = solution_1(input_text)
     print(f"Вход: '{input_text}' → Выход: '{output}' (Ожидалось: '{expected_output}')")
 
 
