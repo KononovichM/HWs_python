@@ -23,8 +23,7 @@ test_cases = [
 ]
 
 for input_text, expected_output in test_cases:
-    output = solution_1(input_text)
-    print(f"Вход: '{input_text}' → Выход: '{output}' (Ожидалось: '{expected_output}')")
+    assert solution_1(input_text) == expected_output
 
 
 # Cвечи
@@ -41,13 +40,13 @@ def solution(candle_number, make_new):
 
 
 # Проверка работоспособности
-print(solution(5, 2))  # 9
-print(solution(1, 2))  # 1
-print(solution(15, 5))  # 18
-print(solution(12, 2))  # 23
-print(solution(6, 4))  # 7
-print(solution(13, 5))  # 16
-print(solution(2, 3))  # 2
+assert solution(5, 2) == 9
+assert solution(1, 2) == 1
+assert solution(15, 5) == 18
+assert solution(12, 2) == 23
+assert solution(6, 4) == 7
+assert solution(13, 5) == 16
+assert solution(2, 3) == 2
 
 
 # Подсчет количества букв
@@ -74,8 +73,4 @@ assert compress_string("aaabbceedd") == "a3b2ce2d2"
 assert compress_string("abcde") == "abcde"
 assert compress_string("aaabbdefffff") == "a3b2def5"
 
-print(compress_string("cccbba"))
-print(compress_string("abeehhhhhccced"))
-print(compress_string("aaabbceedd"))
-print(compress_string("abcde"))
-print(compress_string("aaabbdefffff"))
+
