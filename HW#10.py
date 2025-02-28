@@ -73,4 +73,3 @@ assert compress_string("aaabbceedd") == "a3b2ce2d2"
 assert compress_string("abcde") == "abcde"
 assert compress_string("aaabbdefffff") == "a3b2def5"
 
-
