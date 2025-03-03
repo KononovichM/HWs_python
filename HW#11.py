@@ -31,7 +31,7 @@ def number_check(func):
 
 
 @number_check
-def sum(a, b):
+def ad(a, b):
     return a + b
 
 
@@ -40,7 +40,7 @@ def greet(name):
     return "Привет, " + name
 
 
-print(sum(2, 3))
+print(ad(2, 3))
 print(greet("Мир"))
 
 
