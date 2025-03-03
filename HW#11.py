@@ -31,7 +31,7 @@ def number_check(func):
 
 
 @number_check
-def add(a, b):
+def sum(a, b):
     return a + b
 
 
@@ -40,7 +40,7 @@ def greet(name):
     return "Привет, " + name
 
 
-print(add(2, 3))
+print(sum(2, 3))
 print(greet("Мир"))
 
 
@@ -58,13 +58,13 @@ def typed(arg_type):
 
 
 @typed(arg_type=str)
-def add(a, b):
+def adding(a, b):
     return a + b
 
 
-print(add("3", 5))
-print(add(5, 5))
-print(add('a', 'b'))
+print(adding("3", 5))
+print(adding(5, 5))
+print(adding('a', 'b'))
 
 
 @typed(arg_type=int)
