@@ -23,8 +23,8 @@ class Bank:
         deposit = self.clients[client_id1].get("deposit")
         return deposit.calculate() if deposit else None
 
-    def close_deposit(self, client_id):
-        self.clients[client_id]["deposit"] = None
+    def close_deposit(self, client_id1):
+        self.clients[client_id1]["deposit"] = None
 
 
 client_id = "0000001"
