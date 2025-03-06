@@ -16,11 +16,11 @@ class Bank:
     def register_client(self, customer_id, name):
         self.clients[customer_id] = {"name": name, "deposit": None}
 
-    def open_deposit_account(self, client_id, amount, years):
-        self.clients[client_id]["deposit"] = Deposit(amount, years)
+    def open_deposit_account(self, client_id1, amount, years):
+        self.clients[client_id1]["deposit"] = Deposit(amount, years)
 
-    def calc_interest_rate(self, client_id):
-        deposit = self.clients[client_id].get("deposit")
+    def calc_interest_rate(self, client_id1):
+        deposit = self.clients[client_id1].get("deposit")
         return deposit.calculate() if deposit else None
 
     def close_deposit(self, client_id):
@@ -36,6 +36,7 @@ bank.open_deposit_account(client_id, 1000, 1)
 assert bank.calc_interest_rate(client_id) == 1104.71, "<Error message>"
 
 bank.close_deposit(client_id)
+
 
 # Библиотека
 class Book:
@@ -85,16 +86,16 @@ class Reader:
         if books.reserve(self):
             print(f"{self.name} reserved the book.")
 
-    def cancel_reserve(self, book):
-        if book.cancel_reserve(self):
+    def cancel_reserve(self, book1):
+        if book1.cancel_reserve(self):
             print(f"{self.name} canceled the reservation.")
 
-    def get_book(self, book):
-        if book.get_book(self):
+    def get_book(self, book1):
+        if book1.get_book(self):
             print(f"{self.name} got the book.")
 
-    def return_book(self, book):
-        if book.return_book(self):
+    def return_book(self, book1):
+        if book1.return_book(self):
             print(f"{self.name} returned the book.")
 
 
@@ -115,4 +116,3 @@ vasya.return_book(book)
 petya.return_book(book)
 
 vasya.get_book(book)
-
