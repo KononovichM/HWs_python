@@ -26,7 +26,7 @@ class Bank:
 
     def calc_interest_rate(self, client_id1):
         if self.has_deposit(client_id1):
-            return
+            return None
 
         deposit = self.clients[client_id1].get("deposit")
         return deposit.calculate() if deposit else None
