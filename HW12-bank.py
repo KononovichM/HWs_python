@@ -36,7 +36,7 @@ bank = Bank()
 bank.register_client(client_id, "Siarhei")
 bank.open_deposit_account(client_id, 1000, 1)
 
-assert bank.calc_interest_rate(client_id) == 1104.71, "Ошибка: расчетная сумма по вкладу отличается от ожидаемой!"
+assert bank.calc_interest_rate(client_id) == \
+       1104.71, "Ошибка: расчетная сумма по вкладу отличается от ожидаемой!"
 
 bank.close_deposit(client_id)
-

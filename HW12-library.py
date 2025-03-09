@@ -76,4 +76,3 @@ vasya.return_book(book)
 petya.return_book(book)
 
 vasya.get_book(book)
-
