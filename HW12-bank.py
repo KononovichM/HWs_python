@@ -92,7 +92,11 @@ converter = CurrencyConverter()
 vasya = Person('USD', 10)
 petya = Person('EUR', 5)
 
-assert converter.exchange_currency(vasya.currency, vasya.amount) == (32.69, "BYN"), "Conversion error"
-assert converter.exchange_currency(petya.currency, petya.amount) == (35.20, "BYN"), "Conversion error"
-assert converter.exchange_currency(vasya.currency, vasya.amount, 'EUR') == (9.29, "EUR"), "Conversion error"
-assert converter.exchange_currency(petya.currency, petya.amount, 'USD') == (5.38, "USD"), "Conversion error"
+assert converter.exchange_currency(vasya.currency, vasya.amount) \
+       == (32.69, "BYN"), "Conversion error"
+assert converter.exchange_currency(petya.currency, petya.amount) \
+       == (35.20, "BYN"), "Conversion error"
+assert converter.exchange_currency(vasya.currency, vasya.amount, 'EUR') \
+       == (9.29, "EUR"), "Conversion error"
+assert converter.exchange_currency(petya.currency, petya.amount, 'USD') \
+       == (5.38, "USD"), "Conversion error"
