@@ -13,23 +13,25 @@ with open(file_name, "w", encoding="utf-8") as file:
     file.write("\n".join(students_data) + "\n")
 
 with open(file_name, "r", encoding="utf-8") as file:
-    lines = file.readlines()
+    lines: list[str] = file.readlines()
 
-total_students = len(lines)
-groups = {}
+total_students: int = len(lines)
+groups: dict[str, list[int]] = {}
+
 for line in lines:
-    name, group, grades = line.strip().split(", ")
-    grades = list(map(int, grades.split()))
+    name, group, grades_str = line.strip().split(", ")
+    grades: list[int] = list(map(int, grades_str.split()))
     if group not in groups:
         groups[group] = []
     groups[group].extend(grades)
 
-stats = [f"Общее количество студентов: {total_students}"]
+stats: list[str] = [f"Общее количество студентов: {total_students}"]
+
 for group, grades in groups.items():
-    avg_grade = sum(grades) / len(grades)
+    avg_grade: float = sum(grades) / len(grades)
+    num_students: int = sum(1 for l in lines if f", {group}," in l)
     stats.append(f"Группа {group}: Количество студентов: "
-                 f"{len([l for l in lines if f', {group},' in l])},"
-                 f" Средняя оценка: {avg_grade:.2f}")
+                 f"{num_students}, Средняя оценка: {avg_grade:.2f}")
 
 with open(file_name, "a", encoding="utf-8") as file:
     file.write("\n" + "\n".join(stats) + "\n")
