@@ -27,8 +27,8 @@ for line in lines:
 stats = [f"Общее количество студентов: {total_students}"]
 for group, grades in groups.items():
     avg_grade = sum(grades) / len(grades)
-    stats.append(f"Группа {group}: Количество студентов: {len([l for l in lines if f', {group},' in l])}, "
-                 f"Средняя оценка: {avg_grade:.2f}")
+    stats.append(f"Группа {group}: Количество студентов: "
+                 f"{len([l for l in lines if f', {group},' in l])}, Средняя оценка: {avg_grade:.2f}")
 
 with open(file_name, "a", encoding="utf-8") as file:
     file.write("\n" + "\n".join(stats) + "\n")

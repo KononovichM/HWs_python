@@ -7,7 +7,7 @@ def find_best_club(json_file1):
 
     best_club = max(clubs, key=lambda club: club["wins"])
 
-    print(f'Клуб с наибольшим количеством побед:')
+    print('Клуб с наибольшим количеством побед:')
     print(f'Название: {best_club["name"]}')
     print(f'Страна: {best_club["country"]}')
     print(f'Количество побед: {best_club["wins"]}')
