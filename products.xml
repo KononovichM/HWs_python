@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <name>Ноутбук</name>
+        <price>75000</price>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <name>Смартфон</name>
+        <price>50000</price>
+        <quantity>25</quantity>
+    </product>
+    <product>
+        <name>Наушники</name>
+        <price>3000</price>
+        <quantity>50</quantity>
+    </product>
+</products>
