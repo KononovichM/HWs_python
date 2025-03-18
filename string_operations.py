@@ -15,8 +15,8 @@ print("3 символ с конца:", third_char_from_end)
 string_length = len(test_string)
 print("Длина:", string_length)
 
-reversed = test_string[::-1]
-print("Перевернутая строка:", reversed)
+reversed_str = test_string[::-1]
+print("Перевернутая строка:", reversed_str)
 
 first_eight_chars = test_string[:8]
 print("Первые 8 символов:", first_eight_chars)
